@@ -1,0 +1,72 @@
+============================================================
+SEGUNDA ETAPA: VAR INDIVIDUAL + REGRESION TRANSVERSAL
+Panel: 32 estados, enero 2004 - diciembre 2024
+VAR(p) individual por OLS, p = 3 
+Ordenamiento Cholesky: h -> g -> pi
+IRF acumulada de pi ante choque en h, horizonte: 12 meses
+Segunda etapa: MCO con errores robustos HC3
+============================================================
+
+Estados con IRF valida: 32 
+
+Tabla escalares IRF por estado:
+   cve_ent      irf_acum violencia_promedio informalidad_promedio
+1        1  6.885237e-04         0.21176167                    NA
+2        2  1.667204e-03         1.23753901                    NA
+3        3  4.959648e-04         0.39945674                    NA
+4        4  1.070141e-03         0.26390092                    NA
+5        5 -1.044312e-03         0.40605180                    NA
+6        6  5.582167e-04         1.24831773                    NA
+7        7  4.045404e-04         0.35739521                    NA
+8        8  2.692897e-04         1.48457843                    NA
+9        9  2.773817e-04         0.49234885                    NA
+10      10 -1.378157e-03         0.66707641                    NA
+11      11  4.785346e-04         0.88729636                    NA
+12      12 -4.262560e-04         1.35374947                    NA
+13      13  7.529297e-05         0.33305328                    NA
+14      14  3.109378e-04         0.66138194                    NA
+15      15  1.235748e-04         0.62633575                    NA
+16      16  1.779468e-03         1.01086179                    NA
+17      17  8.619000e-04         1.02574707                    NA
+18      18 -4.224389e-04         0.69138552                    NA
+19      19 -1.739550e-04         0.59356837                    NA
+20      20  4.896103e-04         0.73817347                    NA
+21      21 -4.990664e-05         0.42179686                    NA
+22      22  1.784813e-04         0.24405052                    NA
+23      23 -2.944450e-04         0.61962607                    NA
+24      24  1.463923e-03         0.55235865                    NA
+25      25 -2.838247e-03         1.16750186                    NA
+26      26  8.293650e-04         0.95046061                    NA
+27      27  1.030197e-04         0.48884843                    NA
+28      28 -9.002063e-04         0.71984617                    NA
+29      29  2.828077e-04         0.29525246                    NA
+30      30 -5.838403e-04         0.43692154                    NA
+31      31  2.889486e-04         0.05890873                    NA
+32      32  1.617556e-03         0.93538847                    NA
+
+
+Regresion: IRF acumulada ~ violencia_promedio
+
+Call:
+lm(formula = irf_acum ~ violencia_promedio, data = tabla_segunda_etapa)
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-0.0030596 -0.0003938  0.0001019  0.0003794  0.0015668 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(>|t|)
+(Intercept)        1.562e-04  3.566e-04   0.438    0.665
+violencia_promedio 5.583e-05  4.669e-04   0.120    0.906
+
+Residual standard error: 0.0009466 on 30 degrees of freedom
+Multiple R-squared:  0.0004763,	Adjusted R-squared:  -0.03284 
+F-statistic: 0.0143 on 1 and 30 DF,  p-value: 0.9056
+
+
+t test of coefficients:
+
+                     Estimate Std. Error t value Pr(>|t|)
+(Intercept)        1.5619e-04 2.8446e-04  0.5491   0.5870
+violencia_promedio 5.5827e-05 5.3868e-04  0.1036   0.9181
+

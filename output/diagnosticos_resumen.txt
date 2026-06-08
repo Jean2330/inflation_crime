@@ -1,0 +1,58 @@
+============================================================
+DIAGNOSTICOS Y ESTADISTICAS DESCRIPTIVAS
+Panel: 32 estados x 252 meses, enero 2004 - diciembre 2024
+============================================================
+
+------ INPC (inflacion mensual pi) ------
+       pi         
+ Min.   :-8.8827  
+ 1st Qu.: 0.1374  
+ Median : 0.3566  
+ Mean   : 0.3639  
+ 3rd Qu.: 0.6021  
+ Max.   : 9.4333  
+
+------ Narco-homicidios (tasa por 100k) ------
+      tasa        
+ Min.   : 0.0000  
+ 1st Qu.: 0.3271  
+ Median : 0.7076  
+ Mean   : 1.3077  
+ 3rd Qu.: 1.5111  
+ Max.   :19.0643  
+
+Estados con tasa promedio > 5 por 100k:
+# A tibble: 0 × 3
+# ℹ 3 variables: cve_ent <int>, tasa_media <dbl>, entidad <chr>
+
+------ ITAEE (nivel, interpolado a mensual) ------
+     itaee       
+ Min.   : 53.77  
+ 1st Qu.: 82.20  
+ Median : 92.86  
+ Mean   : 91.40  
+ 3rd Qu.: 99.74  
+ Max.   :179.92  
+
+------ Controles macro ------
+      d_tc               cetes28        expectativa   
+ Min.   :-0.0881281   Min.   : 2.672   Min.   :3.070  
+ 1st Qu.:-0.0124059   1st Qu.: 4.233   1st Qu.:3.592  
+ Median :-0.0007442   Median : 6.556   Median :3.770  
+ Mean   : 0.0024444   Mean   : 6.266   Mean   :3.832  
+ 3rd Qu.: 0.0127775   3rd Qu.: 7.719   3rd Qu.:4.030  
+ Max.   : 0.1636229   Max.   :11.322   Max.   :5.160  
+ NA's   :1                             NA's   :10     
+     d_wti          
+ Min.   :-0.568125  
+ 1st Qu.:-0.047959  
+ Median : 0.014306  
+ Mean   : 0.002848  
+ 3rd Qu.: 0.059932  
+ Max.   : 0.545621  
+ NA's   :1          
+
+------ Correlacion bruta cross-sectional ------
+Pearson (h_media, pi_media): -0.399 
+Un valor bajo no descarta el efecto causal: la correlacion bruta
+no condiciona por efectos fijos ni controles macroeconomicos.
